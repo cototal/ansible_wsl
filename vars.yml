@@ -1,0 +1,5 @@
+---
+ansible_become_pass: "{{ vault_ansible_become_pass }}"
+username: "{{ vault_username }}"
+full_name: "{{ vault_full_name }}"
+email: "{{ vault_email }}"

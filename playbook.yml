@@ -1,0 +1,19 @@
+---
+- hosts: localhost
+  connection: local
+  vars_files:
+    - vars.yml
+    - vault.yml
+  tasks:
+    - import_tasks: "./tasks/packages.yml"
+      tags:
+        - core
+        - packages
+    - import_tasks: "./tasks/git.yml"
+      tags:
+        - git
+        - core
+    - import_tasks: "./tasks/dev-repos.yml"
+      tags:
+        - core
+        - devrepos
